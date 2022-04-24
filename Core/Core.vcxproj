@@ -112,6 +112,11 @@
     <ClCompile Include="LibraryLoad.cpp" />
     <ClCompile Include="StringUtils.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibCore\LibCore.vcxproj">
+      <Project>{93b49f3e-6d8e-4a56-aea6-5c2cebcf7244}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\boost.1.78.0\build\boost.targets" Condition="Exists('..\packages\boost.1.78.0\build\boost.targets')" />

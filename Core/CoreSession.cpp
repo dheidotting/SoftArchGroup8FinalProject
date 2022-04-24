@@ -1,5 +1,5 @@
 #include "CoreSession.h"
-#include "Observer.h"
+#include "..\LibCore\Observer.h"
 #include "..\AppPartOps\DelMeBadPattern.h"
 
 
@@ -17,9 +17,9 @@ CoreSession& CoreSession::GetInstance()
 
 void CoreSession::SetupDefaultObservers()
 {
-    m_observerForSavePart = new Observer(CoreSession::GetInstance(), Observer::SavePart);
-    m_observerForClosePart = new Observer(CoreSession::GetInstance(), Observer::ClosePart);
-    m_observerForOpenPart = new Observer(CoreSession::GetInstance(), Observer::OpenPart);
+    m_observerForSavePart = new Observer(TopSession::GetInstance(), Observer::SaveEntity);
+    m_observerForClosePart = new Observer(TopSession::GetInstance(), Observer::CloseEntity);
+    m_observerForOpenPart = new Observer(TopSession::GetInstance(), Observer::OpenEntity);
 
 }
 
@@ -49,19 +49,19 @@ void CoreSession::NotifyAll()  {
 static std::string  GenerateMessageFromEvent(Observer::EventTypes eventType)
 {
     std::string retVal;
-    if (eventType == Observer::ClosePart)
+    if (eventType == Observer::CloseEntity)
     {
         retVal = "Close Part was Called";
     }
-    else if (eventType == Observer::OpenPart)
+    else if (eventType == Observer::OpenEntity)
     {
         retVal = "Open Part was Called";
     }
-    else if (eventType == Observer::SavePart)
+    else if (eventType == Observer::SaveEntity)
     {
         retVal = "Save Part was Called";
     }
-    else if (eventType == Observer::CreatePart)
+    else if (eventType == Observer::CreateEntity)
     {
         retVal = "Create Part was Called";
     }

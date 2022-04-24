@@ -1,7 +1,7 @@
 #pragma once
 
 #include "UILIbraryExports.h"
-#include "..\Core\Observer.h"
+#include "..\LibCore\Observer.h"
 
 
 class UILIBRARY_API UI
