@@ -91,6 +91,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="Journaling_Part.h" />
     <ClInclude Include="Journaling_Session.h" />
+    <ClInclude Include="PartObserver.h" />
     <ClInclude Include="PartOps.h" />
     <ClInclude Include="PartOpsInternal.h" />
   </ItemGroup>
@@ -98,6 +99,7 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Journaling_Part.cpp" />
     <ClCompile Include="Journaling_Session.cpp" />
+    <ClCompile Include="PartObserver.cpp" />
     <ClCompile Include="PartOps.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +111,9 @@
     </ProjectReference>
     <ProjectReference Include="..\Journaling\Journaling.vcxproj">
       <Project>{3ed245ab-f27b-4166-8e34-f5f0f355bf0a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LibCore\LibCore.vcxproj">
+      <Project>{93b49f3e-6d8e-4a56-aea6-5c2cebcf7244}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

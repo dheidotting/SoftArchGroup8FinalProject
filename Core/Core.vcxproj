@@ -98,10 +98,8 @@
     <ClInclude Include="CoreUtils.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="GuidObject.h" />
-    <ClInclude Include="IObserver.h" />
     <ClInclude Include="ISubject.h" />
     <ClInclude Include="LibraryLoad.h" />
-    <ClInclude Include="Observer.h" />
     <ClInclude Include="StringUtils.h" />
   </ItemGroup>
   <ItemGroup>
@@ -112,7 +110,6 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="GuidObject.cpp" />
     <ClCompile Include="LibraryLoad.cpp" />
-    <ClCompile Include="Observer.cpp" />
     <ClCompile Include="StringUtils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

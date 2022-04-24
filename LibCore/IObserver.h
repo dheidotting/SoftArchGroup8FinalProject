@@ -1,15 +1,15 @@
 #pragma once
-#include "CoreExports.h"
+#include "LibCore.h"
 #include <string>
 
-class CORE_API IObserver {
+class LIBCORE_API IObserver {
 public:
     enum EventTypes
     {
-        SavePart =0,
-        OpenPart =1,
-        ClosePart =2,
-        CreatePart =4
+        SaveEntity = 0,
+        OpenEntity = 1,
+        CloseEntity = 2,
+        CreateEntity = 4
     };
 
     virtual ~IObserver() {};

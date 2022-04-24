@@ -4,8 +4,8 @@
 
 int Observer::static_number_ = 0;
 
-Observer::Observer(CoreSession& coreSession, EventTypes eventType) : coreSession_(coreSession) , m_eventType(eventType){
-    this->coreSession_.Attach(this);
+Observer::Observer(TopSession& coreSession, EventTypes eventType) : topSession_(coreSession), m_eventType(eventType) {
+    this->topSession_.Attach(this);
     std::cout << "Hi, I'm the Observer \"" << ++Observer::static_number_ << "\".\n";
     this->number_ = Observer::static_number_;
 }
@@ -13,7 +13,7 @@ Observer::~Observer() {
     std::cout << "Goodbye, I was the Observer \"" << this->number_ << "\".\n";
 }
 
-void Observer::Update(const std::string& message_from_subject)  {
+void Observer::Update(const std::string& message_from_subject) {
     message_from_subject_ = message_from_subject;
     PrintInfo();
 }
@@ -24,21 +24,21 @@ void Observer::Update(const std::string& message_from_subject, void* data) {
 
 
 void Observer::RemoveMeFromTheList() {
-    coreSession_.Detach(this);
+    topSession_.Detach(this);
     std::cout << "Observer \"" << number_ << "\" removed from the list.\n";
 }
-void Observer::PrintInfo() 
+void Observer::PrintInfo()
 {
     std::cout << "Observer \"" << this->number_ << "\": a new message is available --> " << this->message_from_subject_ << "\n";
 
 }
 
-void Observer::PrintInfo(void * data)
+void Observer::PrintInfo(void* data)
 {
-    PartOpsNotifierData* partData = (PartOpsNotifierData*)data;
+    PartOpsNotifierData* entityData = (PartOpsNotifierData*)data;
 
     std::cout << "Observer \"" << this->number_ << "\": a new message is available --> " << this->message_from_subject_ << "\n";
-    std::cout << "Part Data \n" << "Part FilePath " << partData->partName << "\nPart GUID " << partData->guid << std::endl;
+    std::cout << "Entity Data \n" << "FilePath " << entityData->partName << "\nPart GUID " << entityData->guid << std::endl;
 
 }
 

@@ -6,11 +6,13 @@
 #include "..\Journaling\Journaling.h"
 #include "..\Core\LibraryLoad.h"
 #include "..\Core\CoreSession.h"
-#include "..\Core\Observer.h"
+#include "..\LibCore\Observer.h"
 #include "..\JavaLoader\JavaLoader.h"
 #include "..\Core\CoreUtils.h"
 #include "..\FeatureOpsUI\BlockBuilderUI.h"
 #include "..\AppLibrary\Journaling_BlockBuilder.h"
+
+#include "..\TopLevelSession\TopSession.h"
 
 UI::UI()
 {
@@ -23,8 +25,8 @@ void UI::Init()
 
 	CoreSession::GetInstance().CreateMessage("Hello World! :D");
 	CoreSession::GetInstance().CreateMessage("The weather is hot today! :p");
-	observer4 = new Observer(CoreSession::GetInstance(), Observer::ClosePart);
-	observer5 = new Observer(CoreSession::GetInstance(), Observer::SavePart);
+	observer4 = new Observer(TopSession::GetInstance(), Observer::CloseEntity);
+	observer5 = new Observer(TopSession::GetInstance(), Observer::SaveEntity);
 	CoreSession::GetInstance().CreateMessage("My new car is great! ;)");
 
 }

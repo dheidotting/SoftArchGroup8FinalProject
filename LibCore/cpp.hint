@@ -1,0 +1,2 @@
+#define LIBCORE_API __declspec(dllexport)
+#define LIBCORE_API __declspec(dllimport)

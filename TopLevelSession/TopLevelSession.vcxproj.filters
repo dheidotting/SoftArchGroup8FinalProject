@@ -16,48 +16,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AppPartOpsExports.h">
+    <ClInclude Include="TopLevelSession.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PartOps.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PartOpsInternal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DelMeBadPattern.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Journaling_Part.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Journaling_Session.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PartObserver.h">
+    <ClInclude Include="TopSession.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TopLevelSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PartOps.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Journaling_Part.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Journaling_Session.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PartObserver.cpp">
+    <ClCompile Include="TopSession.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
