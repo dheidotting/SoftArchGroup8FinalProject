@@ -121,6 +121,9 @@
     <ProjectReference Include="..\PartOpsUI\PartOpsUI.vcxproj">
       <Project>{6897419d-b643-48a6-8f1a-f03a94004946}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\TopLevelSession\TopLevelSession.vcxproj">
+      <Project>{41cf5c63-f59c-4fd5-aead-fc0e4a150402}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -17,9 +17,9 @@ CoreSession& CoreSession::GetInstance()
 
 void CoreSession::SetupDefaultObservers()
 {
-    m_observerForSavePart = new Observer(TopSession::GetInstance(), Observer::SaveEntity);
-    m_observerForClosePart = new Observer(TopSession::GetInstance(), Observer::CloseEntity);
-    m_observerForOpenPart = new Observer(TopSession::GetInstance(), Observer::OpenEntity);
+    //m_observerForSavePart = new Observer(TopSession::GetInstance(), Observer::SaveEntity);
+    //m_observerForClosePart = new Observer(TopSession::GetInstance(), Observer::CloseEntity);
+    //m_observerForOpenPart = new Observer(TopSession::GetInstance(), Observer::OpenEntity);
 
 }
 
