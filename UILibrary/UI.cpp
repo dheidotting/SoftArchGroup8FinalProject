@@ -21,13 +21,12 @@ UI::UI()
 
 void UI::Init()
 {
-	CoreSession::GetInstance().SetupDefaultObservers();
+	TopSession::GetInstance().SetupDefaultObservers();
 
-	CoreSession::GetInstance().CreateMessage("Hello World! :D");
-	CoreSession::GetInstance().CreateMessage("The weather is hot today! :p");
+	TopSession::GetInstance().CreateMessage("Hello World from the Top Level Session! :D");
 	observer4 = new Observer(TopSession::GetInstance(), Observer::CloseEntity);
 	observer5 = new Observer(TopSession::GetInstance(), Observer::SaveEntity);
-	CoreSession::GetInstance().CreateMessage("My new car is great! ;)");
+	TopSession::GetInstance().CreateMessage("My new car is great! ;)");
 
 }
 
